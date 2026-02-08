@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suraj Takbhate | Java Full Stack Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="modal fade" id="blogModal1" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark border border-secondary rounded-4">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title text-info">Understanding Spring Boot Microservices</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-white-50">
+                <p>Microservices architecture is a method of developing software systems that focuses on building single-function modules with well-defined interfaces and operations.</p>
+                <h6 class="text-white mt-4">Key Learning Points:</h6>
+                <ul>
+                    <li>Decoupling services for independent deployment.</li>
+                    <li>Using Spring Cloud for service discovery.</li>
+                    <li>API Gateway implementation.</li>
+                </ul>
+                <p>In this project/blog, I explored how Eureka Server and Feign Client work together to build a scalable system.</p>
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+<div class="modal fade" id="blogModal2" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark border border-secondary rounded-4">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title text-warning">Optimizing MySQL Queries for Speed</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-white-50">
+                <p>Database performance is the backbone of any enterprise application. During my projects, I realized that as data grows, simple queries become slow.</p>
+                <h6 class="text-white mt-4">Performance Strategies:</h6>
+                <ul>
+                    <li><strong>Indexing:</strong> Using B-Tree indexes on frequently searched columns to speed up retrieval.</li>
+                    <li><strong>Query Profiling:</strong> Analyzing "EXPLAIN" plans to identify bottlenecks in SQL execution.</li>
+                    <li><strong>Connection Pooling:</strong> Implementing HikariCP for efficient database connection management in Spring Boot.</li>
+                </ul>
+                <p>Proper database design can reduce server load and improve the end-user experience significantly.</p>
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="blogModal3" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-dark border border-secondary rounded-4">
+            <div class="modal-header border-secondary">
+                <h5 class="modal-title text-success">Building Robust REST APIs with Spring</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-white-50">
+                <p>REST APIs are the bridge between frontend and backend. Using Spring Boot makes it easier to follow best practices while maintaining high security.</p>
+                <h6 class="text-white mt-4">Best Practices Implemented:</h6>
+                <ul>
+                    <li><strong>Proper Status Codes:</strong> Using correct HTTP status codes like 201 Created, 404 Not Found, etc.</li>
+                    <li><strong>Global Exception Handling:</strong> Using @ControllerAdvice to manage errors gracefully.</li>
+                    <li><strong>DTO Pattern:</strong> Using Data Transfer Objects to prevent exposing internal database entities.</li>
+                </ul>
+                <p>Focusing on security and scalability ensures that the backend remains robust under high traffic.</p>
+            </div>
+            <div class="modal-footer border-secondary">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+<script type="text/javascript">
+    window.onload = function() { 
+        Calendly.initBadgeWidget({ 
+            url: 'https://calendly.com/surajtakbhate01/30min', // Ithe tuzi link taka
+            text: ' Book a Coffee Chat', 
+            color: '#0dcaf0', 
+            textColor: '#ffffff', 
+            branding: false 
+        }); 
+    }
+</script>
+<body>
+
+
+
+
+
+<div class="progress-container">
+    <div class="progress-bar" id="scrollBar"></div>
+</div>
+
+
+<div class="social-side-bar d-none d-md-flex">
+    <a href="https://github.com/SURAJTAKBHATE0403" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://linkedin.com/in/surajtakbhate/" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="https://wa.me/919370678243" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    <div class="v-line"></div>
+</div>
+
+<nav class="navbar navbar-expand-lg fixed-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand fw-bold text-white" href="#">SURAJ<span class="text-info">.</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto text-uppercase">
+                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                <li class="nav-item">
+                    <a class="nav-link text-white fw-bold mx-2" href="#resume">Resume</a>
+                </li>
+                <li class="nav-item"><a class="nav-link btn-contact" href="#contact">CONTACT ME</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<section id="home" class="hero d-flex align-items-center">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-7" data-aos="fade-right">
+                <span class="badge rounded-pill bg-soft-info text-info mb-3">
+                    I am a <span id="typed-text"></span>
+                </span>
+                <h1 class="display-2 fw-bold text-white">Suraj Takbhate</h1>
+                <p class="lead text-white-50 mb-4">Crafting robust Java Backends & Interactive Frontends. Based in Pune, MH.</p>
+                <div class="d-flex gap-3 justify-content-center justify-content-lg-start">
+                    <a href="https://github.com/SURAJTAKBHATE0403" class="btn btn-info btn-lg px-4 shadow">View GitHub</a>
+                    <a href="Suraj Takbhate_Resume.pdf" target="_blank" class="btn btn-outline-light btn-lg px-4">
+                        <i class="fas fa-file-download me-2"></i>Download CV
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-5 text-center" data-aos="zoom-in">
+                <div class="profile-img-container">
+                    <img src="Blue Shart.jpg" alt="Suraj Takbhate" class="img-fluid profile-img shadow-lg">
+                    <div class="experience-badge">
+                        <span class="fw-bold">BCA</span>
+                        <p class="mb-0">Graduate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="py-100 bg-darker">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                <div class="terminal-window">
+                    <div class="terminal-header">
+                        <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                        <span class="terminal-title text-muted ms-2">suraj_profile.java</span>
+                    </div>
+                    <div class="terminal-body">
+                        <p><span class="text-success">suraj@root:~$</span> java Profile.java</p>
+                        <p class="text-info">>> Fetching Professional Details...</p>
+                        <p><strong>Education:</strong> BCA Graduate</p>
+                        <p class="text-warning">B. P. Sulakhe Commerce College, Barshi</p>
+                        <p><strong>Certification:</strong> Java Full Stack Development</p>
+                        <p><strong>Core Focus:</strong> Java, Spring Boot, MySQL, REST APIs, Web Tech</p>
+                        <p><span class="text-success">suraj@root:~$</span> <span class="cursor">|</span></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <h2 class="display-6 fw-bold text-white mb-4">Behind the Code</h2>
+                    <p class="text-white-50">
+                        I am Full Stack Developer dedicated to building high-performance web applications.
+                         While my core expertise lies in developing robust microservices with Java Spring Boot, 
+                         I am equally passionate about crafting interactive and stunning front-end interfaces using modern frameworks and tools.
+                    </p>
+                        <p class="text-white-50">
+                             End-to-end application development is more than just a job for me—it's my passion. 
+                             I focus on designing scalable systems and delivering seamless, user-friendly experiences that solve real-world problems effectively.
+                        </p>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="timeline-container">
+    
+    <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date text-info">2025</div>
+        <div class="timeline-content">
+            <h5 class="text-white">Java Full Stack Development</h5>
+            <p class="text-warning mb-1">Pune, Maharashtra</p>
+            <p class="text-white-50 small mb-3">
+                Focus: Core & Advanced Java,Hibernate, Spring Boot,Angular, Microservices, MySQL, and Web Technologies,HTML,CSS,JS.
+            </p>
+                <i class="fas fa-map-marker-alt me-1"></i> In Pune
+            </a>
+        </div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date text-info">2021 – 2024</div>
+        <div class="timeline-content">
+            <h5 class="text-white">BCA</h5>
+            <p class="text-warning mb-1">B. P. Sulakhe Commerce College Barshi </p>
+            <p class="text-white-50 small mb-3">Aggregate: <strong>70.76%</strong></p>
+            <a href="http://bpsccbarshi.org/" target="_blank" class="btn btn-sm btn-outline-info rounded-pill px-3">
+                <i class="fas fa-external-link-alt me-1"></i> Visit College
+            </a>
+        </div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-right">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date text-info">2020 – 2021</div>
+        <div class="timeline-content">
+            <h5 class="text-white">HSC (Science)</h5>
+            <p class="text-warning mb-1">Shri Shivaji Mahavidyalaya, Barshi</p>
+            <p class="text-white-50 small mb-3">Percentage: <strong>65.17%</strong></p>
+            <a href="https://ssmbarshi.org.in/" target="_blank" class="btn btn-sm btn-outline-warning rounded-pill px-3 text-warning">
+                <i class="fas fa-map-marker-alt me-1"></i> View Campus
+            </a>
+        </div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-left">
+        <div class="timeline-dot"></div>
+        <div class="timeline-date text-info">2018 – 2019</div>
+        <div class="timeline-content">
+            <h5 class="text-white">SSC</h5>
+            <p class="text-warning mb-1">Lokseva Vidyalaya Shripati Pimpri</p>
+            <p class="text-white-50 small mb-3">Percentage: <strong>64.60%</strong></p>
+            <a href="https://schools.org.in/solapur/27300211902/lokseva-vidyalay-shripat-pimpri.html" target="_blank" class="btn btn-sm btn-outline-warning rounded-pill px-3 text-warning">
+                <i class="fas fa-school me-1"></i> Lokseva School
+            </a>
+        </div>
+    </div>
+
+</div>
+
+<section id="blog" class="py-100 bg-darker">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-6 fw-bold text-white">Technical Insights</h2>
+            <p class="text-white-50">Sharing my journey and learnings in Java Full Stack Development.</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="blog-card p-0 rounded-4 overflow-hidden border border-secondary bg-black h-100">
+                    <div class="p-4">
+                        <span class="badge bg-soft-info text-info mb-2">Java</span>
+                        <h5 class="text-white">Understanding Spring Boot Microservices</h5>
+                        <p class="text-white-50 small">A deep dive into how microservices communicate and why they are essential for scalable enterprise applications...</p>
+                          <a href="#" class="text-info text-decoration-none small fw-bold" data-bs-toggle="modal" data-bs-target="#blogModal1">
+                                Read More <i class="fas fa-arrow-right ms-1"></i>
+                            </a>                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="blog-card p-0 rounded-4 overflow-hidden border border-secondary bg-black h-100">
+                    <div class="p-4">
+                        <span class="badge bg-soft-warning text-warning mb-2">Database</span>
+                        <h5 class="text-white">Optimizing MySQL Queries for Speed</h5>
+                        <p class="text-white-50 small">Learn how indexing and query optimization can reduce database response time by up to 50% in Java applications...</p>
+                            <a href="#" class="text-warning text-decoration-none small fw-bold" data-bs-toggle="modal" data-bs-target="#blogModal2">
+                                Read More <i class="fas fa-arrow-right ms-1"></i>
+                            </a>                    
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="blog-card p-0 rounded-4 overflow-hidden border border-secondary bg-black h-100">
+                    <div class="p-4">
+                        <span class="badge bg-soft-success text-success mb-2">Backend</span>
+                        <h5 class="text-white">Building Robust REST APIs with Spring</h5>
+                        <p class="text-white-50 small">Explore the best practices for designing scalable, secure, and maintainable RESTful services using Spring Boot...</p>
+                            <a href="#" class="text-success text-decoration-none small fw-bold" data-bs-toggle="modal" data-bs-target="#blogModal3">
+                                Read More <i class="fas fa-arrow-right ms-1"></i>
+                            </a>                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="skills" class="py-100 bg-black">
+    <div class="container text-center">
+        <h2 class="display-6 fw-bold text-white mb-5" data-aos="fade-up">Technical Expertise</h2>
+        <div class="row g-4 justify-content-center">
+            
+            <div class="col-md-4 col-12" data-aos="flip-left">
+                <div class="skill-box p-4 border border-secondary rounded-4 h-100">
+                    <i class="fab fa-java text-info display-4 mb-3"></i>
+                    <h5 class="text-white">Java & Spring Boot</h5>
+                    <p class="text-white-50 small mb-4">Backend Architectures & Microservices</p>
+                    
+                    <div class="skill-progress mt-3">
+                        <div class="d-flex justify-content-between text-white-50 mb-1 small">
+                            <span>Proficiency</span>
+                            <span><span class="counter" data-target="90">0</span>%</span>
+                        </div>
+                        <div class="progress bg-dark border border-secondary" style="height: 8px;">
+                            <div class="progress-bar bg-info" role="progressbar" style="width: 0%" aria-valuenow="90"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-12" data-aos="flip-left" data-aos-delay="100">
+                <div class="skill-box p-4 border border-secondary rounded-4 h-100">
+                    <i class="fas fa-database text-warning display-4 mb-3"></i>
+                    <h5 class="text-white">MySQL / SQL</h5>
+                    <p class="text-white-50 small mb-4">Database Optimization & Management</p>
+                    
+                    <div class="skill-progress mt-3">
+                        <div class="d-flex justify-content-between text-white-50 mb-1 small">
+                            <span>Proficiency</span>
+                            <span><span class="counter" data-target="85">0</span>%</span>
+                        </div>
+                        <div class="progress bg-dark border border-secondary" style="height: 8px;">
+                            <div class="progress-bar bg-warning" role="progressbar" style="width: 0%" aria-valuenow="85"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 col-12" data-aos="flip-left" data-aos-delay="200">
+                <div class="skill-box p-4 border border-secondary rounded-4 h-100">
+                    <i class="fab fa-js text-primary display-4 mb-3"></i>
+                    <h5 class="text-white">Web Technologies</h5>
+                    <p class="text-white-50 small mb-4">Responsive Frontend & Interactive UI</p>
+                    
+                    <div class="skill-progress mt-3">
+                        <div class="d-flex justify-content-between text-white-50 mb-1 small">
+                            <span>Proficiency</span>
+                            <span><span class="counter" data-target="85">0</span>%</span>
+                        </div>
+                        <div class="progress bg-dark border border-secondary" style="height: 8px;">
+                            <div class="progress-bar bg-primary" role="progressbar" style="width: 0%" aria-valuenow="80"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="projects" class="py-100 bg-darker">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-6 fw-bold text-white">Case Studies</h2>
+            <p class="text-white-50">High-performance applications solving real-world challenges through code.</p>
+        </div>
+        <div class="row g-4">
+            
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="project-card p-4 rounded-4 shadow-lg border border-secondary h-100" data-tilt>
+                    <div class="project-icon mb-3">
+                        <i class="fas fa-user-check text-info fs-1"></i>
+                    </div>
+                    <h4 class="text-white">Student Attendence Tracker System</h4>
+                    <p class="text-white-50 small">
+                        Developed an automated management system to digitize academic attendance. 
+                        Engineered with optimized Java logic and relational database schemas data accuracy and eliminate manual entry errors.
+                    </p>
+                    <div class="mt-3">
+                        <span class="badge bg-dark border border-info text-info me-1">Java</span>
+                        <span class="badge bg-dark border border-info text-info me-1">HIBERNATE</span>
+                        <span class="badge bg-dark border border-info text-info me-1">SPRING BOOT</span>
+                        <span class="badge bg-dark border border-info text-info me-1">REST API'S</span>
+                        <span class="badge bg-dark border border-info text-info me-1">ANGULAR</span>
+                        <span class="badge bg-dark border border-info text-info me-1">MySQL</span>
+                        <span class="badge bg-dark border border-info text-info me-1">JDBC</span>
+                    </div>
+                    <a href="https://github.com/SURAJTAKBHATE0403" target="_blank" class="btn btn-sm btn-outline-info mt-4">Source Code <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-card p-4 rounded-4 shadow-lg border border-secondary h-100" data-tilt>
+                    <div class="project-icon mb-3">
+                        <i class="fas fa-landmark text-success fs-1"></i>
+                    </div>
+                    <h4 class="text-white">e-Gram Tax Solutions</h4>
+                    <p class="text-white-50 small">
+                        Architected a digital governance platform for rural tax administration. 
+                        Leveraged Spring Boot to build scalable RESTful APIs, enabling seamless management of citizen records and secure financial data processing.
+                    </p>
+                    <div class="mt-3">
+                        <span class="badge bg-dark border border-success text-success me-1">JAVA</span>
+                        <span class="badge bg-dark border border-success text-success me-1">Spring Boot</span>
+                        <span class="badge bg-dark border border-success text-success me-1">REST API</span>
+                        <span class="badge bg-dark border border-success text-success me-1">Hibernate</span>
+                        <span class="badge bg-dark border border-success text-success me-1">MySQL</span>
+                    </div>
+                    <a href="https://github.com/SURAJTAKBHATE0403" target="_blank" class="btn btn-sm btn-outline-success mt-4">Source Code <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-card p-4 rounded-4 shadow-lg border border-secondary h-100" data-tilt>
+                    <div class="project-icon mb-3">
+                        <i class="fas fa-envelope-open-text text-warning fs-1"></i>
+                    </div>
+                    <h4 class="text-white">TempusMail Engine</h4>
+                    <p class="text-white-50 small">
+                        Engineered a high-fidelity replica of a disposable email service. 
+                        Focused on UI/UX performance by implementing asynchronous HTML CSS JAVASCRIPT AND NODE.JS architectures to deliver a lag-free user experience.
+                    </p>
+                    <div class="mt-3">
+                        <span class="badge bg-dark border border-warning text-warning me-1">HTML</span>
+                        <span class="badge bg-dark border border-warning text-warning me-1">CSS</span>
+                        <span class="badge bg-dark border border-warning text-warning me-1">JAVASCRIPT</span>
+                        <span class="badge bg-dark border border-warning text-warning me-1">NODE.JS</span>
+                    </div>
+                    <a href="https://github.com/SURAJTAKBHATE0403" target="_blank" class="btn btn-sm btn-outline-warning mt-4">Source Code <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="resume" class="py-100 bg-darker">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-6 fw-bold text-white">Professional Resume</h2>
+            <div class="v-line mx-auto my-3"></div>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-lg-6" data-aos="fade-right">
+                <h4 class="text-info mb-4"><i class="fas fa-graduation-cap me-2"></i> Education</h4>
+                <div class="resume-item border-start border-info ps-4 pb-4">
+                    <h5 class="text-white">Java Full Stack Development</h5>
+                    <p class="text-info mb-1">The-Kiran-Academy | 2025 - Present</p>
+                    <p class="text-white-50 small">Specializing in Spring Boot, Microservices, and Web applications.</p>
+                </div>
+                <div class="resume-item border-start border-info ps-4">
+                    <h5 class="text-white">BCA-Bachelor of Computer Application</h5>
+                    <p class="text-info mb-1">B. P. Sulakhe Commerce College | 2021 - 2024</p>
+                    <p class="text-white-50 small">Focused on building a solid foundation in programming, database management, and software engineering methodologies</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-left">
+                <h4 class="text-warning mb-4"><i class="fas fa-tools me-2"></i> Skills Summary</h4>
+                <div class="bg-black p-4 rounded-4 border border-secondary shadow-lg">
+                    <div class="mb-3">
+                        <span class="badge bg-soft-info text-info p-2 me-2"></span>
+                        <span class="badge bg-soft-info text-info p-2 me-2">Spring Boot</span>
+                        <span class="badge bg-soft-info text-info p-2 me-2">Microservices</span>
+                        <span class="badge bg-soft-info text-info p-2 me-2">MySQL</span>
+                    </div>
+                    <div class="mb-4">
+                        <span class="badge bg-soft-warning text-warning p-2 me-2">Angular.js</span>
+                        <span class="badge bg-soft-warning text-warning p-2 me-2">JavaScript</span>
+                        <span class="badge bg-soft-warning text-warning p-2 me-2">Bootstrap</span>
+                    </div>
+                    
+                    <hr class="border-secondary">
+                    
+                    <p class="text-white-50 mb-4">You can download my full resume for detailed information about my projects and professional background.</p>
+                    
+                    <a href="Suraj Takbhate_Resume.pdf" target="_blank" class="btn btn-info btn-lg w-100 fw-bold shadow">
+                        <i class="fas fa-file-download me-2"></i>Download Resume (PDF)
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section id="contact" class="py-100 bg-black">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-6 fw-bold text-white">Get in Touch with Suraj</h2>
+            <p class="text-white-50">Have questions or opportunities? Please fill out the form below to send a message.</p>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-6" data-aos="fade-up">
+                <div class="contact-form p-4 rounded-4 shadow-lg border border-secondary">
+                    <form action="https://formspree.io/f/mpqjzzdr" method="POST">
+                        <div class="mb-3">
+                            <label class="text-white-50 small">Full Name</label>
+                            <input type="text" name="name" class="form-control bg-dark text-white border-secondary" placeholder="Enter your name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="text-white-50 small">Email Address</label>
+                            <input type="email" name="email" class="form-control bg-dark text-white border-secondary" placeholder="email@example.com" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="text-white-50 small">Your Message</label>
+                            <textarea name="message" class="form-control bg-dark text-white border-secondary" rows="4" placeholder="How can I help you?" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-info w-100 py-2 fw-bold shadow mb-4">SEND MESSAGE</button>
+                    </form>
+
+                    <hr class="border-secondary opacity-25">
+                    <div class="text-center mt-4">
+                        <p class="text-white-50 small mb-3 text-uppercase fw-bold" style="letter-spacing: 2px;">Direct Connect</p>
+                        <div class="d-flex justify-content-center gap-4">
+                            <a href="https://github.com/SURAJTAKBHATE0403" target="_blank" class="contact-social-icon github">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/surajtakbhate/" target="_blank" class="contact-social-icon linkedin">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://wa.me/919370678243" target="_blank" class="contact-social-icon whatsapp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="py-5 bg-black border-top border-secondary text-center">
+    <div class="container">
+        <h5 class="text-white fw-light mb-3" style="letter-spacing: 1px;">
+            Designed & Engineered by 
+            <span class="text-info fw-bold" style="text-shadow: 0 0 10px rgba(13, 202, 240, 0.3);">
+                Suraj Takbhate
+            </span> ❤️
+        </h5>
+
+        <div class="text-white-50 small">
+            <p class="mb-1">
+                <i class="fas fa-map-marker-alt me-2 text-info"></i>Pune, Maharashtra
+            </p>
+            <p class="mb-0">
+                <i class="fas fa-phone-alt me-2 text-info"></i>+91-9370678243
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // AOS
+        AOS.init({ duration: 1000, once: true });
+        
+        // Tilt Effect
+        VanillaTilt.init(document.querySelectorAll(".project-card"), { 
+            max: 15, 
+            speed: 400, 
+            glare: true, 
+            "max-gl-are": 0.2 
+        });
+    });
+</script>
+<script src="script.js" defer></script>
+</body>
+</html>

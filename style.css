@@ -1,0 +1,561 @@
+:root {
+    --bg-black: #020617;
+    --bg-darker: #0f172a;
+    --accent: #0ea5e9;
+    --glass: rgba(255, 255, 255, 0.05);
+}
+
+body {
+    background-color: var(--bg-black);
+    color: #f8fafc;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+
+
+/* Dark/Light Mode Base Styles */
+body.light-theme {
+    background-color: #f8fafc !important;
+    color: #2a0f2a !important;
+}
+
+body.light-theme .bg-black, 
+body.light-theme .bg-darker,
+body.light-theme section {
+    background-color: #f8fafc !important;
+}
+
+body.light-theme .text-white, 
+body.light-theme h1, 
+body.light-theme h2, 
+body.light-theme h4 {
+    color: #2a0f21 !important;
+}
+
+body.light-theme .contact-form,
+body.light-theme .skill-box,
+body.light-theme .project-card {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border: 1px solid #cbd5e1 !important;
+}
+
+.btn-outline-light:hover {
+    background-color: #ffffff;
+    color: #000000 !important;
+    transform: translateY(-3px); /* इथला अर्धवट कोड पूर्ण केला आहे */
+}
+
+
+
+
+/* Glassmorphism Effect for Cards & Terminal */
+.project-card, .terminal-window, .contact-form {
+    background: rgba(255, 255, 255, 0.03); /* Ekdam transparent white */
+    backdrop-filter: blur(12px); /* Ha main magic effect aahe */
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Barik shine border */
+    border-radius: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    transition: all 0.4s ease;
+}
+
+/* Hover kelyavar thoda ajun glow dakhvnyasathi */
+.project-card:hover {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transform: translateY(-10px);
+}
+
+
+
+
+
+
+
+
+
+/* Glass Navbar */
+.navbar {
+    background: rgba(2, 6, 23, 0.85);
+    backdrop-filter: blur(15px);
+    padding: 18px 0;
+}
+
+.nav-link { 
+    color: #cbd5e1 !important; 
+    font-weight: 500; 
+    margin: 0 12px; 
+    transition: 0.3s; 
+}
+.nav-link:hover { color: var(--accent) !important; }
+
+/* Hero Section */
+.hero { min-height: 100vh; padding-top: 100px; }
+.java-float { font-size: 10rem; animation: float 6s infinite ease-in-out; }
+
+@keyframes float { 
+    0%, 100% { transform: translateY(0); } 
+    50% { transform: translateY(-20px); } 
+}
+
+/* Terminal Window */
+
+/* Profile Image Container Styling */
+.profile-img-container {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-img {
+    width: 300px;           /* इमेजची रुंदी निश्चित केली */
+    height: 300px;          /* इमेजची उंची निश्चित केली */
+    object-fit: cover;      /* इमेज स्ट्रेच न होता बॉक्समध्ये फिट होईल */
+    border-radius: 50%;     /* इमेजला पूर्ण गोल करण्यासाठी */
+    border: 5px solid rgba(14, 165, 233, 0.2); /* निळा फिकट बॉर्डर */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05); /* माऊस नेल्यावर थोडी मोठी होईल */
+    box-shadow: 0 0 30px rgba(14, 165, 233, 0.5); /* ग्लो इफेक्ट */
+}
+
+/* Experience Badge चं लोकेशन नीट करण्यासाठी */
+.experience-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: var(--accent);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+@keyframes blink { 50% { opacity: 0; } }
+/* Skill Cards Styling */
+.skill-box {
+    background: rgba(15, 23, 42, 0.6); /* Thoda transparent dark */
+    backdrop-filter: blur(5px);
+    border: 1px solid #1e293b;
+    border-radius: 20px;
+    transition: 0.4s;
+    padding: 2rem !important; /* Spacing thodi vadhavli */
+}
+
+/* Card madhil descriptions sathi (जे दिसत नाहीत ते) */
+.skill-box p.text-muted, 
+.skill-box p.small {
+    color: #94a3b8 !important; /* Bright Greyish-White color */
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+/* Icons cha glow effect */
+.skill-box i {
+    filter: drop-shadow(0 0 10px rgba(14, 165, 233, 0.3));
+}
+
+
+
+.skill-box:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 25px rgba(14, 165, 233, 0.25);
+    transform: translateY(-8px);
+}
+
+.skill-badge { font-size: 0.75rem; letter-spacing: 1px; color: #64748b; margin-top: 5px; }
+
+/* Project Cards */
+
+
+
+
+
+
+
+/* Utility Classes */
+.bg-darker { background-color: var(--bg-darker); }
+.bg-black { background-color: var(--bg-black); }
+.py-100 { padding: 100px 0; }
+.bg-soft-info { background: rgba(14, 165, 233, 0.15); }
+
+/* --- नवीन बदल: Contact Section Social Icons --- */
+
+.contact-social-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.05);
+    color: #cbd5e1;
+    font-size: 1.5rem;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-decoration: none;
+}
+
+.contact-social-icon:hover {
+    transform: translateY(-5px);
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* सोशल आयकॉन्सचे स्पेसिफिक कलर्स */
+.contact-social-icon.github:hover {
+    background: #333;
+    border-color: #666;
+}
+.contact-social-icon.linkedin:hover {
+    background: #0077b5;
+    border-color: #0077b5;
+}
+.contact-social-icon.whatsapp:hover {
+    background: #25d366;
+    border-color: #25d366;
+}
+
+/* Testimonial Glass Card */
+.glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    padding: 40px;
+    transition: 0.3s ease-in-out;
+}
+
+.glass-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: scale(1.02);
+}
+
+/* Quotes Icon Style */
+.quote-icon {
+    font-size: 2rem;
+    color: var(--accent);
+    opacity: 0.5;
+    margin-bottom: 20px;
+}
+
+/* Star Ratings (Optional) */
+.stars {
+    color: #f1c40f; /* Gold Color */
+    margin-top: 10px;
+}
+
+.modal-content {
+    background: rgba(20, 20, 20, 0.95) !important;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(13, 202, 240, 0.2);
+}
+
+/* Social Sidebar Icons mothe ani center karnyathi */
+.social-side-bar {
+    position: fixed;
+    left: 20px; /* Thoda side ne gap */
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center la annyasathi */
+    gap: 20px; /* Icons madhe space denyasathi */
+    z-index: 1000;
+}
+
+.social-side-bar a {
+    font-size: 24px; /* Icon chi size mothi kely (vadhva lagli tar ithe badal kar) */
+    color: #f0f5f6; /* Blue color icons sathi */
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.social-side-bar a:hover {
+    transform: translateY(-5px) scale(1.2); /* Hover kelyavar mothe hovun varti janyasathi */
+    color: #1dcae1;
+}
+
+.v-line {
+    width: 2px;
+    height: 100px; /* Line chi lambi */
+    background-color: #0dcaf0;
+    margin-top: 10px;
+}
+
+
+
+.timeline-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+/* Vertical Center Line */
+.timeline-container::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background: #0dcaf0;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -1px;
+}
+
+.timeline-item {
+    padding: 10px 40px;
+    position: relative;
+    width: 50%;
+    box-sizing: border-box;
+}
+
+/* Left & Right side adjustment */
+.timeline-item:nth-child(odd) { left: 0; text-align: right; }
+.timeline-item:nth-child(even) { left: 50%; text-align: left; }
+
+/* Timeline Dots */
+.timeline-dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #0dcaf0;
+    border: 4px solid #000;
+    border-radius: 50%; 
+    top: 20px;
+    z-index: 1;
+}
+
+.timeline-item:nth-child(odd) .timeline-dot { right: -8px; }
+.timeline-item:nth-child(even) .timeline-dot { left: -8px; }
+
+.timeline-content {
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+
+.timeline-content:hover {
+    border-color: #0dcaf0;
+    transform: scale(1.02);
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .timeline-container::after { left: 31px; }
+    .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; text-align: left !important; }
+    .timeline-dot { left: 23px !important; }
+}
+
+.typed-cursor {
+    color: #0dcaf0; /* Tuzya blue theme sarkha cursor */
+    font-size: 1.2rem;
+}
+
+/* Blog Card Base Style */
+.blog-card {
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+/* Hover Effects: Border Darkening (to Cyan), Glow, and Movement */
+.blog-card:hover {
+    /* 1. Movement: थोडं वर सरकते */
+    transform: translateY(-12px);
+    
+    /* 2. Border Brightness: बॉर्डरचा रंग बदलतो */
+    border-color: #0dcaf0 !important; 
+    
+    /* 3. Glow Effect: निळा प्रकाश (Shadow) */
+    box-shadow: 0 15px 30px rgba(13, 202, 240, 0.15), 
+                0 0 15px rgba(13, 202, 240, 0.1);
+}
+
+/* मधल्या मजकुरासाठी थोडा स्मूथनेस */
+.blog-card h5 {
+    transition: color 0.3s ease;
+}
+
+.blog-card:hover h5 {
+    color: #0dcaf0 !important; /* माऊस नेल्यावर हेडलाईनचा रंग बदलेल */
+}
+
+
+/* Progress Bar Container */
+.progress-container {
+    position: fixed;
+    top: 0;
+    z-index: 10000; /* Navbar च्या पण वर दिसायला हवा */
+    width: 100%;
+    height: 4px; /* बारची जाडी */
+    background: transparent;
+}
+
+/* Actual Progress Bar */
+.progress-bar {
+    height: 4px;
+    background: #6ee87c; /* तुझा सिग्नेचर निळा कलर */
+    width: 0%; /* सुरुवातीला ० असेल */
+    box-shadow: 0 0 10px rgba(13, 202, 240, 0.7); /* थोडा ग्लो इफेक्ट */
+    transition: width 0.1s ease-out;
+}
+
+
+
+.bg-soft-info { background: rgba(13, 202, 240, 0.1); }
+.bg-soft-warning { background: rgba(255, 193, 7, 0.1); }
+.bg-soft-success { background: rgba(25, 135, 84, 0.1); }
+
+.blog-card {
+    transition: all 0.3s ease;
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    border-color: #0dcaf0 !important;
+    box-shadow: 0 10px 30px rgba(13, 202, 240, 0.2);
+}
+
+.modal-content {
+    background-color: #121212 !important;
+    box-shadow: 0 0 40px rgba(0,0,0,0.5);
+}
+
+.modal-header, .modal-footer {
+    border-color: #333 !important;
+}
+
+/* प्रोग्रेस बारला ॲनिमेट करण्यासाठी ट्रान्झिशन */
+.progress-bar {
+    width: 0; 
+    transition: width 2s ease-in-out;
+}
+
+.counter {
+    font-weight: bold;
+    color: #0dcaf0; /* तुझा निळा कलर */
+}
+
+.bg-darker { background-color: #080808; }
+
+.resume-item {
+    position: relative;
+}
+
+/* डॉट्स (Dots) साठी स्टाईल */
+.resume-item::before {
+    content: "";
+    position: absolute;
+    left: -6px;
+    top: 5px;
+    width: 11px;
+    height: 11px;
+    background-color: #0dcaf0;
+    border-radius: 50%;
+}
+
+.bg-soft-info { background: rgba(13, 202, 240, 0.1); }
+.bg-soft-warning { background: rgba(255, 193, 7, 0.1); }
+
+
+/* १. सर्व सोशल आयकॉन्ससाठी कॉमन इफेक्ट (बाहेरचा डबा वर सरकण्यासाठी) */
+.contact-social-icon:hover {
+    transform: translateY(-5px) !important; /* हा पूर्ण डबा वर नेईल */
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* २. GitHub साठी कलर्स (फक्त कलर अपडेट करा) */
+.contact-social-icon.github:hover {
+    background-color: #333 !important; 
+    border-color: #444 !important;
+}
+
+.contact-social-icon.github:hover i {
+    color: #ffffff !important;
+}
+
+/* ३. LinkedIn आणि WhatsApp साठी (इथून transform काढून टाका कारण आपण वर कॉमन मध्ये दिला आहे) */
+.contact-social-icon.linkedin:hover {
+    background-color: #0077b5 !important;
+    border-color: #0077b5 !important;
+}
+
+.contact-social-icon.linkedin:hover i {
+    color: #ffffff !important;
+}
+
+.contact-social-icon.whatsapp:hover {
+    background-color: #25d366 !important;
+    border-color: #25d366 !important;
+}
+
+.contact-social-icon.whatsapp:hover i {
+    color: #ffffff !important;
+}
+
+
+/* HTML मध्ये बदल करा: प्रत्येक Input ला एका 'form-group' मध्ये टाका */
+.form-control:focus {
+    border-color: #0dcaf0;
+    box-shadow: 0 0 15px rgba(13, 202, 240, 0.3);
+    background: rgba(13, 202, 240, 0.05) !important;
+}
+.btn-info {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.btn-info:hover {
+    letter-spacing: 4px; /* अक्षरं लांब होतील */
+    background: #0dcaf0;
+    box-shadow: 0 0 30px rgba(13, 202, 240, 0.6);
+}
+
+@media screen and (max-width: 768px) {
+    /* तुझ्या इमेजमध्ये दाखवलेले एक्स्ट्रा बटन्स हाईड करण्यासाठी */
+    /* इथे त्या बटन्सचा नेमका क्लास किंवा आयडी टाक */
+    .extra-buttons-class { 
+        display: none !important; 
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .profile-img-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .profile-img {
+        width: 200px; /* मोबाईलसाठी छोटी साईज */
+        height: 200px;
+        display: block !important; /* फोटो सक्तीने दाखवण्यासाठी */
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .hero {
+        text-align: center; /* मोबाईलवर सगळं सेंटरला छान दिसतं */
+        padding-top: 80px;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem; /* मोठ्या नावासाठी थोडी छोटी फॉन्ट साईज */
+    }
+}
